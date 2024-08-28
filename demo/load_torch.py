@@ -42,4 +42,23 @@ trans = torch.cuda.FloatTensor(np.zeros((batch_size,3)))
 model = star.forward(poses, betas,trans)
 shaped = model.v_shaped[-1, :, :]
 
+# print(shaped.shape)
+
+# import open3d as o3d
+# import numpy as np
+
+# # 假设你已经有了生成的顶点和面数据
+# # vertices 是一个 (N, 3) 的 numpy 数组，表示3D坐标
+# # faces 是一个 (M, 3) 的 numpy 数组，表示三角形面
+
+# # 创建Open3D三角网格对象
+# mesh = o3d.geometry.TriangleMesh()
+# mesh.vertices = o3d.utility.Vector3dVector(np.asarray(shaped.cpu()))
+# mesh.triangles = o3d.utility.Vector3iVector(np.random.randint(0, 6890, (13776, 3)))
+
+# # 计算法线
+# mesh.compute_vertex_normals()
+
+# # 可视化
+# o3d.visualization.draw_geometries([mesh])
 

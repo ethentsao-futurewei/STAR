@@ -1,2 +1,4 @@
-
-STAR/config.py
+build/
+star.egg-info/
+venv/
+weights/
